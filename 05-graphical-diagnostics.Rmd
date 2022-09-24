@@ -1,0 +1,98 @@
+# Graphical Diagnostics {-}
+
+Recall that in our ANOVA model we have the following assumptions:
+
+1. The observations are independent within and between groups.
+2. The observations within each group are nearly normal.
+3. The variability across the groups are equal.
+
+## Independence assumption {-}
+
+Recall that if the data are a simple random sample, this condition is satisfied. For our experimental data, there are not obvious reasons why independence would not hold for most or all observations.
+
+## Normality assumption {-}
+
+The normality assumption is especially important when the sample size is quite small. However, for the case of small sample sizes, it is difficult to check for non-normality.
+
+<br>
+
+The code below produces the histogram for the response scores for the control group using the `ggplot()` function. The first argument is the data frame containing the scores. The expression `which(surgery$TYPE=="control")` identifies the rows for which the value for `TYPE` is `control`. Furthermore, `surgery[which(surgery$TYPE=="control"),]` means that we are only getting the rows from the full data for which the value for `TYPE` is `control`. This is one of the several ways to subset dataframes in R. In the next argument of the `ggplot()` function, which is `mapping`, we specify the name of the variable of interest which is `RESPONSE`. The function `geom_histogram` generates the histgoram. Some arguments shown below is the `colour` which refers to the color of the borders of the bars, and the `binwidth` which specifies the width of the bins. The default value of the binwidth is not very useful since we have a small sample size, which is 10. For the purpose of getting a better look at the distribution of the values, we adjust the value of the binwidth.
+
+```{r histogram, echo=TRUE, eval=FALSE}
+ggplot(data = surgery[which(surgery$TYPE == "control"),], mapping = aes(x = RESPONSE)) + 
+  geom_histogram(fill = "lightblue", colour = "black", binwidth = 0.3) +
+  labs(title = "Histogram of the response variable for the control group")
+```
+
+<br>
+
+### Exercise 6 {-}
+
+Modify the code above to produce the histogram for the response scores for the behavioural group.
+
+`r hide("Hint")`
+What needs to change from the code above is the type of treatment received; now we are interested in `behav` rather than `control`. Don't forget to change the plot title!
+`r unhide()`
+
+```{r ex6_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+ggplot(data = surgery[which(surgery$TYPE == "behav"),], mapping = aes(x = RESPONSE)) + 
+  geom_histogram(fill = "lightblue", colour = "black", binwidth = 0.4) +
+  labs(title = "Histogram of the response variable for the behavioural group")
+```
+
+<br>
+
+### Exercise 7 {-}
+
+Modify the code above to produce the histogram for the response scores for the aversion group.
+
+`r hide("Hint")`
+Again, we are only changing the treatment type within the `which()` function.
+`r unhide()`
+
+```{r ex7_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+ggplot(data = surgery[which(surgery$TYPE == "aversion"),], mapping = aes(x = RESPONSE)) + 
+  geom_histogram(fill = "lightblue", colour = "black", binwidth = 0.4) +
+  labs(title = "Histogram of the response variable for the aversion group")
+```
+
+<br>
+
+### Exercise 8 {-}
+
+Modify the code above to produce the histogram for the response scores for the drugs group:
+
+`r hide("Hint")`
+The `which()` function should be `which(surgery$TYPE == "drug")`.
+`r unhide()`
+
+```{r ex8_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+ggplot(data = surgery[which(surgery$TYPE == "drug"),], mapping = aes(x = RESPONSE)) + 
+  geom_histogram(fill = "lightblue", colour = "black", binwidth = 0.4) +
+  labs(title = "Histogram of the response variable for the drug group")
+```
+
+<br>
+
+The sample size is very small so it is difficult to check for non-normality using the histograms above.
+
+## Constant variance across groups {-}
+
+Our graphical approach to check for constant variance across groups is the side-by-side box plot. We already produced the boxplot using the `ggplot()` and the `geom_boxplot()` function in the data exploration stage. In addition, we also computed the mean and standard deviation of `RESPONSE` for each treatment group. The outputs are shown below:
+
+```{r constant-variance-1, echo=FALSE, eval=TRUE, fig.align="center"}
+ggplot(data = surgery, mapping = aes(x=TYPE, y=RESPONSE)) + 
+  geom_boxplot() +
+  labs(title = "Boxplot of the response variable by type of treatment")
+```
+
+```{r constant-variance-2, echo=FALSE, eval=TRUE}
+surgery %>%
+  group_by(TYPE) %>%
+  summarise(mean = mean(RESPONSE) , sd = sd(RESPONSE))
+```
+
+The boxplots and summary statistics above show that the aversion group has relatively higher variability compared to the other groups. A formal hypothesis test needs to be performed to check this assumption. If indeed we have evidence of non-constant variance, then other methods should be used for our statistical inquiry on the experimental data. These alternative methods are not within the scope of this course. 
+
+<br>
+

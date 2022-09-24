@@ -1,0 +1,142 @@
+# Exploring the Data {-}
+
+```{r graphic2, echo = FALSE, out.width = "100%", fig.cap = ""}
+knitr::include_graphics("images/summary_statistics.jpg")
+```
+
+In this section, you will explore the data by computing summary statistics and visualizing the data. 
+
+## Importing the Data {-}
+
+The data to be analyzed are saved in a dataframe object called `surgery` which can be imported using the following code.
+
+```{r import_data, echo=TRUE, eval=FALSE}
+surgery <- read.csv(url("https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv"))
+surgery
+```
+
+<br>
+
+### Exercise 1 {-}
+
+Modify the code above to limit the number of rows of `surgery` printed to only 5.
+
+`r hide("Hint")`
+The function `head()` will give a limited view of a dataset.
+`r unhide()`
+
+```{r ex1_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+head(surgery)
+```
+
+<br>
+
+## Creating boxplot {-}
+
+The basic code below produces a boxplot of the variable `RESPONSE` by `TYPE`. Specified in the `ggplot()` function is the (1) `data` argument which is the data frame to use for plot, and the (2) `mapping` argument which describes how the variables in the data are mapped to the visual properties (aesthetics) of the plot that you want. In the mapping argument, we specify in the `x` argument our grouping variable which is `TYPE` and in the `y` argument the variable whose values we plot which is `RESPONSE` in our data. Finally, we use the `geom_boxplot()` function to produce the boxplot.
+
+Run this code in your own `R` console to view the boxplot.
+
+```{r ggboxplot, echo=TRUE, eval=FALSE}
+ggplot(data = surgery, mapping = aes(x=TYPE, y=RESPONSE)) + 
+  geom_boxplot()
+```
+
+<br>
+
+### Exercise 2 {-}
+
+Using the `labs()` function, modify the code above to put a title in the plot. In the `labs()` function, the argument for the title is called `title`.
+
+`r hide("Hint")`
+You want to include in the code `labs(title = "Boxplot of the response variable by type of treatment")`.
+`r unhide()`
+
+```{r ex2_solution, webex.hide="Solution", echo=TRUE, eval=TRUE, include=TRUE}
+ggplot(data = surgery, mapping = aes(x=TYPE, y=RESPONSE)) + 
+  geom_boxplot() +
+  labs(title = "Boxplot of the response variable by type of treatment")
+```
+
+```{r MCQ1}
+opts_Q1 <- sample(c("aversion",
+                    "behav",
+                    "control",
+                    answer = "drug"))
+```
+
+<br>
+
+**Which group appears to have the highest increase in the score on the average?**
+`r longmcq(opts_Q1)`
+
+`r hide("Hint")`
+Compare the lines inside the boxes and see which among the four is the largest. Recall that the line inside the box of a boxplot corresponds to the median.
+`r unhide()`
+
+```{r MCQ2}
+opts_Q2 <- sample(c("The median difference between the final and initial score is close to zero.",
+                    "The scores of the aversion group are badly skewed with some outliers.",
+                    "The median score is closer to the 3rd quartile than the 2nd quartile.",
+                    answer = "Some of the patients in the aversion group have lower final score compared to the initial anxiety score."))
+```
+
+<br>
+
+**Which of the following can be said on the increase in the score for the aversion group?**
+`r longmcq(opts_Q2)`
+
+`r hide("Hint")`
+Recall how to interpret the boxplot. The line that divides the box into two parts is the median, while the two lines that form the box are the 1st and 3rd quartiles. When the median is very close to either the bottom or top of the box, and if a whisker is more extended while the other whisker is shorter, then the distribution is skewed. Finally, a data point that is located outside the whiskers of the box plot is an outlier."
+`r unhide()`
+
+<br>
+
+## Producing summary measures {-}
+
+The code below produces the mean of the variable `RESPONSE` by `TYPE`. The code uses pipes, denoted by `%>%`, which is a powerful tool for expressing a sequence of multiple operations. The code starts with specifying the dataframe `surgery`. Next, it uses the `group_by()` function so that the succeeding operations are performed by group. We specify inside the `group_by()` function the grouping variable which is `TYPE`. Finally, we use the `summarise()` function to compute summary statistics. In the code below, we use the function `mean()` to compute the mean. The `summarise()` function produces a new data frame with the number of rows as the number of groups and the number of columns as the number of summary measures computed. You may specify more than one function, separated by `,`, inside the `summarise()` function if you wish to compute other summary measures in addition to the mean.
+
+Run this code in your own `R` console to view the summary.
+
+```{r summary, echo=TRUE, eval=FALSE}
+surgery %>%
+  group_by(TYPE) %>%
+  summarise(mean = mean(RESPONSE))
+```
+
+<br>
+
+### Exercise 3 {-}
+
+Modify the code above to produce both the mean and the standard deviation for each treatment group.
+
+`r hide("Hint")`
+Within the `summarise()` function, you want to calculate the standard deviation as well as the mean, using `sd()`.
+`r unhide()`
+
+```{r ex3_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+surgery %>%
+  group_by(TYPE) %>%
+  summarise(mean = mean(RESPONSE) , sd = sd(RESPONSE))
+```
+
+```{r Q3a}
+opts_Q3a <- sample(c(answer = "The variability in the response variable is highest in the group of patients who underwent the aversion therapy.",
+                     "The patients in the control group experienced the least mean improvement in anxiety levels among the four treatment groups."))
+```
+
+```{r Q3b}
+opts_Q3b <- c(answer = "The patients who underwent the drug therapy experienced the highest mean decline in the anxiety level.")
+```
+
+<br>
+
+**Which of the following is/are true?**
+`r longmcq(opts_Q3a)`
+`r longmcq(opts_Q3b)`
+
+`r hide("Hint")`
+Recall how to interpet basic summary statistics such as mean, median, standard deviation, and skewness.
+`r unhide()`
+
+<br>

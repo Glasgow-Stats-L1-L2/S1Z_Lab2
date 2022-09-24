@@ -1,0 +1,36 @@
+# Coping With Surgery {-}
+
+```{r graphic3, echo = FALSE, out.width = "80%", fig.cap = "", fig.align="center"}
+knitr::include_graphics("images/surgery.jpg")
+```
+
+## Context {-}
+
+Patients undergoing any surgical procedure often show signs of anxiety.  A psychologist has conducted a study, in which surgical patients have been randomly allocated to one of four different therapy methods.
+
+Each patient has been scored before the therapy begins and after the conclusion of the therapy. Low scores indicate the presence of anxiety and so an **increase** in score represents an **improvement** in a patient’s condition.
+
+## Research Questions {-}
+
+Is there evidence that any of the therapy methods is more effective in increasing the average score of patients? In other words,
+
+1)	On average, is there any evidence of a difference in the effectiveness of the therapy methods?
+2) 	If so, which therapy methods are likely to differ? And by how much?
+
+## Data {-}
+
+The data contains the following variables:
+
+* **INITIAL** : initial score	
+* **FINAL** : final score	 
+* **TREAT** : treatment group coded as a number
+    + 1 - Control
+    + 2 - Behavioural
+    + 3 - Drug
+    + 4 - Aversion
+* **RESPONSE** : final score - initial score
+* **TYPE** : a text version of **TREAT**, i.e., a short description of the treatment
+ 
+You can download a .csv file of the data from our Moodle page. The filename is `surgery.csv`.
+
+<br>

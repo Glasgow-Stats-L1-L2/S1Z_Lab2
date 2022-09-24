@@ -1,0 +1,45 @@
+---
+title: "S1Z Lab 2"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+---
+
+```{r setup, include = FALSE}
+library(webexercises)
+library(tinytex)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(infer)
+
+urlfile <- "https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv"
+surgery <- read.csv(url(urlfile))
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval=FALSE, echo=FALSE}
+install.packages("bookdown")
+```
+
+```{r include=FALSE, echo=FALSE}
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+# Welcome to S1Z Lab 1 {-}
+
+```{r graphic1, echo = FALSE, out.width = "100%", fig.cap = ""}
+knitr::include_graphics("images/image1.jpg")
+```
+
+In this lab activity, we will learn how to perform an ANOVA using R. The material within this lab has been based on OpenIntro Chapters 7 
+<a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=285">OpenIntro Page 285</a>. Feel free to refer back to the materials to help you with this lab. As explained in lab 0, all lab work in S1Z are self contained through the use of `R` consoles.
+
+The material within this lab has been based on OpenIntro. All of the artwork used is by <a href="https://github.com/allisonhorst/stats-illustrations">@allison_horst</a>.
+
+<br>

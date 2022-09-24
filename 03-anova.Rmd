@@ -1,0 +1,116 @@
+# ANOVA {-}
+
+We now perform a one-way analysis of variance. We wish to test whether the mean increase in the anxiety score is the same under the four treatment groups.  
+
+## Hypotheses {-}
+
+Let 
+
+- $\mu_{a}$ = mean increase in anxiety score for the aversion group
+- $\mu_{b}$ = mean increase in anxiety score for the behavioural group
+- $\mu_{c}$ = mean increase in anxiety score for the control group
+- $\mu_{d}$ = mean increase in anxiety score for the drug group
+
+```{r MCQ4}
+opts_Q4 <- sample(c("$\\mu_{a} = \\mu_{b} = \\mu_{c} = \\mu_{d} = 0$",
+                    answer = "$\\mu_{a} = \\mu_{b} = \\mu_{c} = \\mu_{d}$",
+                    "$\\mu_{a} + \\mu_{b} = \\mu_{c} + \\mu_{d}$",
+                    "$\\mu_{a} + \\mu_{b} + \\mu_{c} + \\mu_{d}= 0$"))
+```
+
+<br>
+
+**What is the form of the null hypothesis for ANOVA?**
+`r longmcq(opts_Q4)`
+
+`r hide("Hint")`
+The null hypothesis of ANOVA is that all populations means are equal.
+`r unhide()`
+
+```{r MCQ5}
+opts_Q5 <- sample(c("$\\mu_{a} \\neq \\mu_{b} \\neq \\mu_{c} \\neq \\mu_{d} \\neq 0$",
+                    "$\\mu_{a} \\neq \\mu_{b} \\neq \\mu_{c} \\neq \\mu_{d}$",
+                    "$\\mu_{a} - \\mu_{b} - \\mu_{c} - \\mu_{d} \\neq 0$",
+                    answer = "$\\mu_{a} \\neq \\mu_{b} \\; or \\; \\mu_{a} \\neq \\mu_{c} \\; or \\; \\mu_{a} \\neq \\mu_{d} \\; or \\; \\mu_{b} \\neq \\mu_{c} \\; or \\; \\mu_{b} \\neq \\mu_{d} \\; or \\; \\mu_{c} \\neq \\mu_{d}$"))
+```
+
+<br>
+
+**What is the form of the alternative hypothesis for ANOVA?**
+`r longmcq(opts_Q5)`
+
+`r hide("Hint")`
+The alternative hypothesis of ANOVA is that not all means are equal to each other. An equivalent statement is that at least one pair of means are not equal to each other.
+`r unhide()`
+
+<br>
+
+## ANOVA table {-}
+
+### Exercise 4 {-}
+
+We use the function `aov()` to perform the Analysis of Variance and to produce the ANOVA table. The important arguments to run the `aov()` function are the following: (1) `formula` which is the formula specifying the model, and (2) `data` which is a data frame where the variables specified in the formula will be found. The `formula` argument takes the form `Y~X` where `Y` is the response variable and `X` is the grouping or factor variable.
+
+Perform the ANOVA test. Store the results in an object called `anova.results`. Use the `summary()` function to check the results of ANOVA. An important argument of the `summary()` function is `object` which is the object for which a summary is desired.
+
+`r hide("Hint")`
+The arguments given to `aov()` should be `formula = RESPONSE ~ TYPE` and `data = surgery`.
+`r unhide()`
+
+```{r ex4_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+anova.results <- aov(formula = RESPONSE ~ TYPE, data = surgery)
+summary(object = anova.results)
+```
+
+<br>
+
+**What is the value of SST?**
+`r fitb(207.3)`
+
+`r hide("Hint")`
+Recall that SST = SSE + SSG.
+`r unhide()`
+
+<br>
+
+**What is the degrees of freedom for the SST?**
+`r fitb(39)`
+
+`r hide("Hint")`
+Recall that $df_E = df_T - df_G.$
+`r unhide()`
+
+```{r MCQ6}
+opts_Q6 <- sample(c(answer = "$F \\; \\text{with numerator df = 3 and denominator df = 36}$",
+                    "$F \\; \\text{with numerator df = 36 and denominator df = 3}$",
+                    "$F \\; \\text{with numerator df = 39 and denominator df = 36}$",
+                    "$F \\; \\text{with numerator df = 36 and denominator df = 39}$"))
+```
+
+<br>
+
+**What is the distribution of the F-statistic (under Ho)?**
+`r longmcq(opts_Q6)`
+
+`r hide("Hint")`
+Recall that that numerator degrees of freedom is $df_G$, while the denominator degrees of freedom is $df_E$.
+`r unhide()`
+
+```{r MCQ7}
+opts_Q7 <- sample(c(answer = "Since the p-value is less than 0.05, we reject Ho and conclude that not all means are equal.",
+                    "Since the p-value is less than 0.05, we reject Ho and conclude that all the means are not equal to each other.",
+                    "Since the p-value is less than 0.05, we do not reject Ho and conclude that we don't have enough evidence to conclude that not all means are equal.",
+                    "Since the p-value is less than 0.05, we do not reject Ho and conclude that we don't have enough evidence to conclude that all means are equal."))
+```
+
+<br>
+
+**Using a significance level of 0.05, what is your conclusion based on the p-value of the F-test?**
+`r longmcq(opts_Q7)`
+
+`r hide("Hint")`
+Recall that we reject Ho if the p-value is less than the significance level. If Ho is rejected, then we conclude that at least one mean is different or that not all means are equal.
+`r unhide()`
+
+<br>
+

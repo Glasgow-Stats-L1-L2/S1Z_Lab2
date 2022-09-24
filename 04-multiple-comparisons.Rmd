@@ -1,0 +1,71 @@
+# Multiple Comparisons {-}
+
+Having established that the population means are not all equal, we wish to establish where the significant differences are likely to lie. We do this by performing multiple comparisons using the Bonferroni correction. 
+
+<br>
+
+**What is the value of the adjusted $\alpha^*$?**
+`r fitb(0.0083)`
+
+`r hide("Hint")`
+Recall that $\alpha^*=\frac{\alpha}{K}$, where $K$ is the number of comparisons to be made. We have $K = \frac{4\times 3}{2}=6$.
+`r unhide()`
+
+<br>
+
+To perform multiple comparisons, we use the function `pairwise.t.test()` in the `stats` package. The basic arguments of the `pairwise.t.test()` function for our purpose are: (1) `x` for the response vector, (2) `g` for the grouping vector or factor, (3) `pool.sd` which allows/disallows the use of a pooled standard deviation, and (4) `p.adj` which is the type of adjustment on the p-values from the pairwise t-test. For more information about the function, you can run the line `?pairwise.t.test` below. 
+
+Recall that one of the assumptions of ANOVA is equal variability across groups. This is the reason why we use the data from all groups to estimate variability. We used $\sqrt{MSE}$ as our estimate for the pooled standard deviation. To implement this, we specify `pool.sd = TRUE`. Moreover, for our purpose, we specify `p.adj = "none"`.
+
+<br>
+
+### Exercise 5 {-}
+
+Using the the function `pairwise.t.test()`, perform multiple comparisons test. 
+
+`r hide("Hint")`
+The response vector we're using is `surgery$RESPONSE` and the grouping vector is `surgery$TYPE`.
+`r unhide()`
+
+```{r ex5_solution, webex.hide="Solution", echo=TRUE, eval=TRUE}
+pairwise.t.test(x = surgery$RESPONSE, g = surgery$TYPE, pool.sd = TRUE, p.adj = 'none')
+```
+
+<br>
+
+The output from the above code shows the p-values of the pairwise t-tests using $\sqrt(MSE)$ as the estimate for $s_p$. 
+
+We have computed the adjusted $\alpha$ which is 0.0083. Now we identify which pairs have significantly different means. 
+
+```{r MCQ8}
+opts_Q8a <- sample(c("$\\mu_{a} \\neq \\mu_{b}$",
+                     answer = "$\\mu_{a} \\neq \\mu_{d}$"))
+opts_Q8b <- sample(c("$\\mu_{a} \\neq \\mu_{c}$",
+                     answer = "$\\mu_{b} \\neq \\mu_{d}$"))
+opts_Q8c <- sample(c("$\\mu_{b} \\neq \\mu_{c}$",
+                     answer = "$\\mu_{c} \\neq \\mu_{d}$"))
+```
+
+<br>
+
+**Which of the following can you conclude based on the multiple comparisons?**
+`r longmcq(opts_Q8a)`
+`r longmcq(opts_Q8b)`
+`r longmcq(opts_Q8c)`
+
+`r hide("Hint")`
+Recall that a pair of means are significantly different if the p-value is less than than adjusted $\alpha$.
+`r unhide()`
+
+<br>
+
+The result from the multiple comparisons appear to agree with our boxplot in the data visualization/exploration stage:
+
+```{r boxplot2 , eval=TRUE, fig.align="center"}
+ggplot(data = surgery, mapping = aes(x=TYPE, y=RESPONSE)) + 
+  geom_boxplot() +
+  labs(title = "Boxplot of the response variable by type of treatment")
+```
+
+<br>
+
