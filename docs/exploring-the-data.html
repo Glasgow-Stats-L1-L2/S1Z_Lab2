@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exploring the Data | S1Z Lab 2</title>
   <meta name="description" content="Exploring the Data | S1Z Lab 2" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exploring the Data | S1Z Lab 2" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="coping-with-surgery.html"/>
 <link rel="next" href="anova.html"/>
-<script src="libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -92,7 +90,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +103,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -134,61 +132,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#welcome-to-s1z-lab-1" id="toc-welcome-to-s1z-lab-1">Welcome to S1Z Lab 1<span></span></a></li>
-<li><a href="coping-with-surgery.html#coping-with-surgery" id="toc-coping-with-surgery">Coping With Surgery<span></span></a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to S1Z Lab 2</a></li>
+<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html"><i class="fa fa-check"></i>Coping With Surgery</a>
 <ul>
-<li><a href="coping-with-surgery.html#context" id="toc-context">Context<span></span></a></li>
-<li><a href="coping-with-surgery.html#research-questions" id="toc-research-questions">Research Questions<span></span></a></li>
-<li><a href="coping-with-surgery.html#data" id="toc-data">Data<span></span></a></li>
+<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#context"><i class="fa fa-check"></i>Context</a></li>
+<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#research-questions"><i class="fa fa-check"></i>Research Questions</a></li>
+<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#data"><i class="fa fa-check"></i>Data</a></li>
 </ul></li>
-<li><a href="exploring-the-data.html#exploring-the-data" id="toc-exploring-the-data">Exploring the Data<span></span></a>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html"><i class="fa fa-check"></i>Exploring the Data</a>
 <ul>
-<li><a href="exploring-the-data.html#importing-the-data" id="toc-importing-the-data">Importing the Data<span></span></a>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#importing-the-data"><i class="fa fa-check"></i>Importing the Data</a>
 <ul>
-<li><a href="exploring-the-data.html#exercise-1" id="toc-exercise-1">Exercise 1<span></span></a></li>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-1"><i class="fa fa-check"></i>Exercise 1</a></li>
 </ul></li>
-<li><a href="exploring-the-data.html#creating-boxplot" id="toc-creating-boxplot">Creating boxplot<span></span></a>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#creating-boxplot"><i class="fa fa-check"></i>Creating boxplot</a>
 <ul>
-<li><a href="exploring-the-data.html#exercise-2" id="toc-exercise-2">Exercise 2<span></span></a></li>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-2"><i class="fa fa-check"></i>Exercise 2</a></li>
 </ul></li>
-<li><a href="exploring-the-data.html#producing-summary-measures" id="toc-producing-summary-measures">Producing summary measures<span></span></a>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#producing-summary-measures"><i class="fa fa-check"></i>Producing summary measures</a>
 <ul>
-<li><a href="exploring-the-data.html#exercise-3" id="toc-exercise-3">Exercise 3<span></span></a></li>
-</ul></li>
-</ul></li>
-<li><a href="anova.html#anova" id="toc-anova">ANOVA<span></span></a>
-<ul>
-<li><a href="anova.html#hypotheses" id="toc-hypotheses">Hypotheses<span></span></a></li>
-<li><a href="anova.html#anova-table" id="toc-anova-table">ANOVA table<span></span></a>
-<ul>
-<li><a href="anova.html#exercise-4" id="toc-exercise-4">Exercise 4<span></span></a></li>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-3"><i class="fa fa-check"></i>Exercise 3</a></li>
 </ul></li>
 </ul></li>
-<li><a href="multiple-comparisons.html#multiple-comparisons" id="toc-multiple-comparisons">Multiple Comparisons<span></span></a>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i>ANOVA</a>
 <ul>
-<li><a href="multiple-comparisons.html#exercise-5" id="toc-exercise-5">Exercise 5<span></span></a></li>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#hypotheses"><i class="fa fa-check"></i>Hypotheses</a></li>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#anova-table"><i class="fa fa-check"></i>ANOVA table</a>
+<ul>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#exercise-4"><i class="fa fa-check"></i>Exercise 4</a></li>
 </ul></li>
-<li><a href="graphical-diagnostics.html#graphical-diagnostics" id="toc-graphical-diagnostics">Graphical Diagnostics<span></span></a>
-<ul>
-<li><a href="graphical-diagnostics.html#independence-assumption" id="toc-independence-assumption">Independence assumption<span></span></a></li>
-<li><a href="graphical-diagnostics.html#normality-assumption" id="toc-normality-assumption">Normality assumption<span></span></a>
-<ul>
-<li><a href="graphical-diagnostics.html#exercise-6" id="toc-exercise-6">Exercise 6<span></span></a></li>
-<li><a href="graphical-diagnostics.html#exercise-7" id="toc-exercise-7">Exercise 7<span></span></a></li>
-<li><a href="graphical-diagnostics.html#exercise-8" id="toc-exercise-8">Exercise 8<span></span></a></li>
 </ul></li>
-<li><a href="graphical-diagnostics.html#constant-variance-across-groups" id="toc-constant-variance-across-groups">Constant variance across groups<span></span></a></li>
-</ul></li>
-<li><a href="group-tasks.html#group-tasks" id="toc-group-tasks">Group Tasks<span></span></a>
+<li class="chapter" data-level="" data-path="multiple-comparisons.html"><a href="multiple-comparisons.html"><i class="fa fa-check"></i>Multiple Comparisons</a>
 <ul>
-<li><a href="group-tasks.html#context-1" id="toc-context-1">Context<span></span></a></li>
-<li><a href="group-tasks.html#research-questions-1" id="toc-research-questions-1">Research Questions<span></span></a></li>
-<li><a href="group-tasks.html#data-1" id="toc-data-1">Data<span></span></a></li>
-<li><a href="group-tasks.html#loading-the-data" id="toc-loading-the-data">Loading the Data<span></span></a></li>
-<li><a href="group-tasks.html#task-1" id="toc-task-1">Task 1<span></span></a></li>
-<li><a href="group-tasks.html#task-2" id="toc-task-2">Task 2<span></span></a></li>
-<li><a href="group-tasks.html#task-3" id="toc-task-3">Task 3<span></span></a></li>
-<li><a href="group-tasks.html#task-4" id="toc-task-4">Task 4<span></span></a></li>
+<li class="chapter" data-level="" data-path="multiple-comparisons.html"><a href="multiple-comparisons.html#exercise-5"><i class="fa fa-check"></i>Exercise 5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html"><i class="fa fa-check"></i>Graphical Diagnostics</a>
+<ul>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#independence-assumption"><i class="fa fa-check"></i>Independence assumption</a></li>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#normality-assumption"><i class="fa fa-check"></i>Normality assumption</a>
+<ul>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-6"><i class="fa fa-check"></i>Exercise 6</a></li>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-7"><i class="fa fa-check"></i>Exercise 7</a></li>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-8"><i class="fa fa-check"></i>Exercise 8</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#constant-variance-across-groups"><i class="fa fa-check"></i>Constant variance across groups</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html"><i class="fa fa-check"></i>Group Tasks</a>
+<ul>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#context-1"><i class="fa fa-check"></i>Context</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#research-questions-1"><i class="fa fa-check"></i>Research Questions</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#data-1"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#loading-the-data"><i class="fa fa-check"></i>Loading the Data</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-1"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-2"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-3"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#task-4"><i class="fa fa-check"></i>Task 4</a></li>
 </ul></li>
 </ul>
 
@@ -231,13 +229,13 @@ Hint
 Solution
 </button>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="exploring-the-data.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(surgery)</span></code></pre></div>
-<pre><code>##   INITIAL FINAL TREAT RESPONSE    TYPE
-## 1    30.2  32.0     1      1.8 control
-## 2    35.3  34.8     1     -0.5 control
-## 3    32.4  34.6     1      2.2 control
-## 4    31.9  34.2     1      2.3 control
-## 5    28.4  30.3     1      1.9 control
-## 6    30.5  33.2     1      2.7 control</code></pre>
+<pre><code>##   ï..INITIAL FINAL TREAT RESPONSE    TYPE
+## 1       30.2  32.0     1      1.8 control
+## 2       35.3  34.8     1     -0.5 control
+## 3       32.4  34.6     1      2.2 control
+## 4       31.9  34.2     1      2.3 control
+## 5       28.4  30.3     1      1.9 control
+## 6       30.5  33.2     1      2.7 control</code></pre>
 </div>
 <p><br></p>
 </div>
@@ -269,8 +267,8 @@ Solution
 </div>
 <p><br></p>
 <strong>Which group appears to have the highest increase in the score on the average?</strong>
-<div id="radio_PHOBGHMZPX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PHOBGHMZPX" value=""></input> <span>aversion</span></label><label><input type="radio" autocomplete="off" name="radio_PHOBGHMZPX" value="answer"></input> <span>drug</span></label><label><input type="radio" autocomplete="off" name="radio_PHOBGHMZPX" value=""></input> <span>behav</span></label><label><input type="radio" autocomplete="off" name="radio_PHOBGHMZPX" value=""></input> <span>control</span></label>
+<div id="radio_ASQCQOHVMD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ASQCQOHVMD" value=""></input> <span>behav</span></label><label><input type="radio" autocomplete="off" name="radio_ASQCQOHVMD" value=""></input> <span>aversion</span></label><label><input type="radio" autocomplete="off" name="radio_ASQCQOHVMD" value="answer"></input> <span>drug</span></label><label><input type="radio" autocomplete="off" name="radio_ASQCQOHVMD" value=""></input> <span>control</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -280,8 +278,8 @@ Hint
 </div>
 <p><br></p>
 <strong>Which of the following can be said on the increase in the score for the aversion group?</strong>
-<div id="radio_KAIDGWVFJC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KAIDGWVFJC" value=""></input> <span>The scores of the aversion group are badly skewed with some outliers.</span></label><label><input type="radio" autocomplete="off" name="radio_KAIDGWVFJC" value="answer"></input> <span>Some of the patients in the aversion group have lower final score compared to the initial anxiety score.</span></label><label><input type="radio" autocomplete="off" name="radio_KAIDGWVFJC" value=""></input> <span>The median score is closer to the 3rd quartile than the 2nd quartile.</span></label><label><input type="radio" autocomplete="off" name="radio_KAIDGWVFJC" value=""></input> <span>The median difference between the final and initial score is close to zero.</span></label>
+<div id="radio_BJFQLOBGDX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BJFQLOBGDX" value=""></input> <span>The median score is closer to the 3rd quartile than the 2nd quartile.</span></label><label><input type="radio" autocomplete="off" name="radio_BJFQLOBGDX" value=""></input> <span>The scores of the aversion group are badly skewed with some outliers.</span></label><label><input type="radio" autocomplete="off" name="radio_BJFQLOBGDX" value=""></input> <span>The median difference between the final and initial score is close to zero.</span></label><label><input type="radio" autocomplete="off" name="radio_BJFQLOBGDX" value="answer"></input> <span>Some of the patients in the aversion group have lower final score compared to the initial anxiety score.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -326,11 +324,11 @@ Solution
 </div>
 <p><br></p>
 <strong>Which of the following is/are true?</strong>
-<div id="radio_BEKAQWLOCA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BEKAQWLOCA" value="answer"></input> <span>The variability in the response variable is highest in the group of patients who underwent the aversion therapy.</span></label><label><input type="radio" autocomplete="off" name="radio_BEKAQWLOCA" value=""></input> <span>The patients in the control group experienced the least mean improvement in anxiety levels among the four treatment groups.</span></label>
+<div id="radio_YSMNIUUQIT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YSMNIUUQIT" value="answer"></input> <span>The variability in the response variable is highest in the group of patients who underwent the aversion therapy.</span></label><label><input type="radio" autocomplete="off" name="radio_YSMNIUUQIT" value=""></input> <span>The patients in the control group experienced the least mean improvement in anxiety levels among the four treatment groups.</span></label>
 </div>
-<div id="radio_JGYQXIPUZB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JGYQXIPUZB" value="answer"></input> <span>The patients who underwent the drug therapy experienced the highest mean decline in the anxiety level.</span></label>
+<div id="radio_ONVUORJGZZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ONVUORJGZZ" value="answer"></input> <span>The patients who underwent the drug therapy experienced the highest mean decline in the anxiety level.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -579,7 +577,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
