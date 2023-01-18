@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exploring the Data | S1Z Lab 2</title>
   <meta name="description" content="Exploring the Data | S1Z Lab 2" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exploring the Data | S1Z Lab 2" />
   <meta property="og:type" content="book" />
@@ -47,24 +47,25 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,13 +85,13 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
+code span.bu { } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -103,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.im { } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -132,53 +133,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to S1Z Lab 2</a></li>
-<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html"><i class="fa fa-check"></i>Coping With Surgery</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to S1Z Lab 2</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#load-packages"><i class="fa fa-check"></i>Load packages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html"><i class="fa fa-check"></i>Coping With Surgery</a><ul>
 <li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#context"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#research-questions"><i class="fa fa-check"></i>Research Questions</a></li>
 <li class="chapter" data-level="" data-path="coping-with-surgery.html"><a href="coping-with-surgery.html#data"><i class="fa fa-check"></i>Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html"><i class="fa fa-check"></i>Exploring the Data</a>
-<ul>
-<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#importing-the-data"><i class="fa fa-check"></i>Importing the Data</a>
-<ul>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html"><i class="fa fa-check"></i>Exploring the Data</a><ul>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#importing-the-data"><i class="fa fa-check"></i>Importing the Data</a><ul>
 <li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-1"><i class="fa fa-check"></i>Exercise 1</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#creating-boxplot"><i class="fa fa-check"></i>Creating boxplot</a>
-<ul>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#creating-boxplot"><i class="fa fa-check"></i>Creating boxplot</a><ul>
 <li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-2"><i class="fa fa-check"></i>Exercise 2</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#producing-summary-measures"><i class="fa fa-check"></i>Producing summary measures</a>
-<ul>
+<li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#producing-summary-measures"><i class="fa fa-check"></i>Producing summary measures</a><ul>
 <li class="chapter" data-level="" data-path="exploring-the-data.html"><a href="exploring-the-data.html#exercise-3"><i class="fa fa-check"></i>Exercise 3</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i>ANOVA</a>
-<ul>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i>ANOVA</a><ul>
 <li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#hypotheses"><i class="fa fa-check"></i>Hypotheses</a></li>
-<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#anova-table"><i class="fa fa-check"></i>ANOVA table</a>
-<ul>
+<li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#anova-table"><i class="fa fa-check"></i>ANOVA table</a><ul>
 <li class="chapter" data-level="" data-path="anova.html"><a href="anova.html#exercise-4"><i class="fa fa-check"></i>Exercise 4</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="multiple-comparisons.html"><a href="multiple-comparisons.html"><i class="fa fa-check"></i>Multiple Comparisons</a>
-<ul>
+<li class="chapter" data-level="" data-path="multiple-comparisons.html"><a href="multiple-comparisons.html"><i class="fa fa-check"></i>Multiple Comparisons</a><ul>
 <li class="chapter" data-level="" data-path="multiple-comparisons.html"><a href="multiple-comparisons.html#exercise-5"><i class="fa fa-check"></i>Exercise 5</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html"><i class="fa fa-check"></i>Graphical Diagnostics</a>
-<ul>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html"><i class="fa fa-check"></i>Graphical Diagnostics</a><ul>
 <li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#independence-assumption"><i class="fa fa-check"></i>Independence assumption</a></li>
-<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#normality-assumption"><i class="fa fa-check"></i>Normality assumption</a>
-<ul>
+<li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#normality-assumption"><i class="fa fa-check"></i>Normality assumption</a><ul>
 <li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-6"><i class="fa fa-check"></i>Exercise 6</a></li>
 <li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-7"><i class="fa fa-check"></i>Exercise 7</a></li>
 <li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#exercise-8"><i class="fa fa-check"></i>Exercise 8</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="graphical-diagnostics.html"><a href="graphical-diagnostics.html#constant-variance-across-groups"><i class="fa fa-check"></i>Constant variance across groups</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html"><i class="fa fa-check"></i>Group Tasks</a>
-<ul>
+<li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html"><i class="fa fa-check"></i>Group Tasks</a><ul>
 <li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#context-1"><i class="fa fa-check"></i>Context</a></li>
 <li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#research-questions-1"><i class="fa fa-check"></i>Research Questions</a></li>
 <li class="chapter" data-level="" data-path="group-tasks.html"><a href="group-tasks.html#data-1"><i class="fa fa-check"></i>Data</a></li>
@@ -212,8 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="importing-the-data" class="section level2 unnumbered hasAnchor">
 <h2>Importing the Data<a href="exploring-the-data.html#importing-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data to be analyzed are saved in a dataframe object called <code>surgery</code> which can be imported using the following code.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="exploring-the-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a>surgery <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv&quot;</span>))</span>
-<span id="cb1-2"><a href="exploring-the-data.html#cb1-2" aria-hidden="true" tabindex="-1"></a>surgery</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="exploring-the-data.html#cb2-1"></a>surgery &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="kw">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv&quot;</span>))</span>
+<span id="cb2-2"><a href="exploring-the-data.html#cb2-2"></a>surgery</span></code></pre></div>
 <p><br></p>
 <div id="exercise-1" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 1<a href="exploring-the-data.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -228,7 +220,7 @@ Hint
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="exploring-the-data.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(surgery)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="exploring-the-data.html#cb3-1"></a><span class="kw">head</span>(surgery)</span></code></pre></div>
 <pre><code>##   ï..INITIAL FINAL TREAT RESPONSE    TYPE
 ## 1       30.2  32.0     1      1.8 control
 ## 2       35.3  34.8     1     -0.5 control
@@ -244,8 +236,8 @@ Solution
 <h2>Creating boxplot<a href="exploring-the-data.html#creating-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The basic code below produces a boxplot of the variable <code>RESPONSE</code> by <code>TYPE</code>. Specified in the <code>ggplot()</code> function is the (1) <code>data</code> argument which is the data frame to use for plot, and the (2) <code>mapping</code> argument which describes how the variables in the data are mapped to the visual properties (aesthetics) of the plot that you want. In the mapping argument, we specify in the <code>x</code> argument our grouping variable which is <code>TYPE</code> and in the <code>y</code> argument the variable whose values we plot which is <code>RESPONSE</code> in our data. Finally, we use the <code>geom_boxplot()</code> function to produce the boxplot.</p>
 <p>Run this code in your own <code>R</code> console to view the boxplot.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="exploring-the-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> surgery, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>TYPE, <span class="at">y=</span>RESPONSE)) <span class="sc">+</span> </span>
-<span id="cb4-2"><a href="exploring-the-data.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="exploring-the-data.html#cb5-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> surgery, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>TYPE, <span class="dt">y=</span>RESPONSE)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb5-2"><a href="exploring-the-data.html#cb5-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
 <p><br></p>
 <div id="exercise-2" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 2<a href="exploring-the-data.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -260,15 +252,15 @@ Hint
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="exploring-the-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> surgery, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>TYPE, <span class="at">y=</span>RESPONSE)) <span class="sc">+</span> </span>
-<span id="cb5-2"><a href="exploring-the-data.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb5-3"><a href="exploring-the-data.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Boxplot of the response variable by type of treatment&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="exploring-the-data.html#cb6-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> surgery, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>TYPE, <span class="dt">y=</span>RESPONSE)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-2"><a href="exploring-the-data.html#cb6-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb6-3"><a href="exploring-the-data.html#cb6-3"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Boxplot of the response variable by type of treatment&quot;</span>)</span></code></pre></div>
 <p><img src="main_files/figure-html/ex2_solution-1.png" width="672" /></p>
 </div>
 <p><br></p>
 <strong>Which group appears to have the highest increase in the score on the average?</strong>
-<div id="radio_VLLJCLIPPC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VLLJCLIPPC" value="answer"></input> <span>drug</span></label><label><input type="radio" autocomplete="off" name="radio_VLLJCLIPPC" value=""></input> <span>aversion</span></label><label><input type="radio" autocomplete="off" name="radio_VLLJCLIPPC" value=""></input> <span>behav</span></label><label><input type="radio" autocomplete="off" name="radio_VLLJCLIPPC" value=""></input> <span>control</span></label>
+<div id="radio_GSNKSPYMVO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GSNKSPYMVO" value=""></input> <span>behav</span></label><label><input type="radio" autocomplete="off" name="radio_GSNKSPYMVO" value=""></input> <span>control</span></label><label><input type="radio" autocomplete="off" name="radio_GSNKSPYMVO" value=""></input> <span>aversion</span></label><label><input type="radio" autocomplete="off" name="radio_GSNKSPYMVO" value="answer"></input> <span>drug</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -278,8 +270,8 @@ Hint
 </div>
 <p><br></p>
 <strong>Which of the following can be said on the increase in the score for the aversion group?</strong>
-<div id="radio_VESCINWTET" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VESCINWTET" value=""></input> <span>The median difference between the final and initial score is close to zero.</span></label><label><input type="radio" autocomplete="off" name="radio_VESCINWTET" value=""></input> <span>The median score is closer to the 3rd quartile than the 2nd quartile.</span></label><label><input type="radio" autocomplete="off" name="radio_VESCINWTET" value=""></input> <span>The scores of the aversion group are badly skewed with some outliers.</span></label><label><input type="radio" autocomplete="off" name="radio_VESCINWTET" value="answer"></input> <span>Some of the patients in the aversion group have lower final score compared to the initial anxiety score.</span></label>
+<div id="radio_DDWCOBPNRR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DDWCOBPNRR" value="answer"></input> <span>Some of the patients in the aversion group have lower final score compared to the initial anxiety score.</span></label><label><input type="radio" autocomplete="off" name="radio_DDWCOBPNRR" value=""></input> <span>The median difference between the final and initial score is close to zero.</span></label><label><input type="radio" autocomplete="off" name="radio_DDWCOBPNRR" value=""></input> <span>The median score is closer to the 3rd quartile than the 2nd quartile.</span></label><label><input type="radio" autocomplete="off" name="radio_DDWCOBPNRR" value=""></input> <span>The scores of the aversion group are badly skewed with some outliers.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -294,9 +286,9 @@ Hint
 <h2>Producing summary measures<a href="exploring-the-data.html#producing-summary-measures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The code below produces the mean of the variable <code>RESPONSE</code> by <code>TYPE</code>. The code uses pipes, denoted by <code>%&gt;%</code>, which is a powerful tool for expressing a sequence of multiple operations. The code starts with specifying the dataframe <code>surgery</code>. Next, it uses the <code>group_by()</code> function so that the succeeding operations are performed by group. We specify inside the <code>group_by()</code> function the grouping variable which is <code>TYPE</code>. Finally, we use the <code>summarise()</code> function to compute summary statistics. In the code below, we use the function <code>mean()</code> to compute the mean. The <code>summarise()</code> function produces a new data frame with the number of rows as the number of groups and the number of columns as the number of summary measures computed. You may specify more than one function, separated by <code>,</code>, inside the <code>summarise()</code> function if you wish to compute other summary measures in addition to the mean.</p>
 <p>Run this code in your own <code>R</code> console to view the summary.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="exploring-the-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a>surgery <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="exploring-the-data.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(TYPE) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="exploring-the-data.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(RESPONSE))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="exploring-the-data.html#cb7-1"></a>surgery <span class="op">%&gt;%</span></span>
+<span id="cb7-2"><a href="exploring-the-data.html#cb7-2"></a><span class="st">  </span><span class="kw">group_by</span>(TYPE) <span class="op">%&gt;%</span></span>
+<span id="cb7-3"><a href="exploring-the-data.html#cb7-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(RESPONSE))</span></code></pre></div>
 <p><br></p>
 <div id="exercise-3" class="section level3 unnumbered hasAnchor">
 <h3>Exercise 3<a href="exploring-the-data.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -311,12 +303,12 @@ Hint
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="exploring-the-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>surgery <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="exploring-the-data.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(TYPE) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="exploring-the-data.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(RESPONSE) , <span class="at">sd =</span> <span class="fu">sd</span>(RESPONSE))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="exploring-the-data.html#cb8-1"></a>surgery <span class="op">%&gt;%</span></span>
+<span id="cb8-2"><a href="exploring-the-data.html#cb8-2"></a><span class="st">  </span><span class="kw">group_by</span>(TYPE) <span class="op">%&gt;%</span></span>
+<span id="cb8-3"><a href="exploring-the-data.html#cb8-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(RESPONSE) , <span class="dt">sd =</span> <span class="kw">sd</span>(RESPONSE))</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 3
 ##   TYPE      mean    sd
-##   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+##   &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt;
 ## 1 aversion  0.44 1.35 
 ## 2 behav     1.5  0.688
 ## 3 control   1.45 0.981
@@ -324,11 +316,11 @@ Solution
 </div>
 <p><br></p>
 <strong>Which of the following is/are true?</strong>
-<div id="radio_JIUVLAKMEU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JIUVLAKMEU" value=""></input> <span>The patients in the control group experienced the least mean improvement in anxiety levels among the four treatment groups.</span></label><label><input type="radio" autocomplete="off" name="radio_JIUVLAKMEU" value="answer"></input> <span>The variability in the response variable is highest in the group of patients who underwent the aversion therapy.</span></label>
+<div id="radio_GRQRLBBUXO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GRQRLBBUXO" value="answer"></input> <span>The variability in the response variable is highest in the group of patients who underwent the aversion therapy.</span></label><label><input type="radio" autocomplete="off" name="radio_GRQRLBBUXO" value=""></input> <span>The patients in the control group experienced the least mean improvement in anxiety levels among the four treatment groups.</span></label>
 </div>
-<div id="radio_TNGCRAELQS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TNGCRAELQS" value="answer"></input> <span>The patients who underwent the drug therapy experienced the highest mean decline in the anxiety level.</span></label>
+<div id="radio_XISEHRXILU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XISEHRXILU" value="answer"></input> <span>The patients who underwent the drug therapy experienced the highest mean decline in the anxiety level.</span></label>
 </div>
 <div class="webex-solution">
 <button>
