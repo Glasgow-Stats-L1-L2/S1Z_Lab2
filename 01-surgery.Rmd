@@ -31,6 +31,15 @@ The data contains the following variables:
 * **RESPONSE** : final score - initial score
 * **TYPE** : a text version of **TREAT**, i.e., a short description of the treatment
  
-You can download a .csv file of the data from our Moodle page. The filename is `surgery.csv`.
+## Importing the Data {-}
+
+The data to be analyzed are saved in a dataframe object called `surgery` which can be imported using the following code.
+
+```{r import_data, echo=TRUE, eval=FALSE}
+surgery <- read.csv(url("https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv"))
+surgery
+```
+
+You may also download the dataset named `surgery.csv` file from our Moodle course page. Save the file in your local computer and then use the `read.csv()` function to import the data in your R. You can load the data set into your workspace by running the code below in an Rscript file in your local Rstudio. Make sure that the `surgery.csv` file is saved in the same folder as the Rscript file. 
 
 <br>

@@ -6,16 +6,6 @@ knitr::include_graphics("images/summary_statistics.jpg")
 
 In this section, you will explore the data by computing summary statistics and visualizing the data. 
 
-## Importing the Data {-}
-
-The data to be analyzed are saved in a dataframe object called `surgery` which can be imported using the following code.
-
-```{r import_data, echo=TRUE, eval=FALSE}
-surgery <- read.csv(url("https://raw.githubusercontent.com/StephenVillejo/S1Z.AnovaLab/main/surgery.csv"))
-surgery
-```
-
-<br>
 
 ### Exercise 1 {-}
 
