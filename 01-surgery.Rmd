@@ -33,7 +33,7 @@ The data contains the following variables:
  
 ## Importing the Data {-}
 
-The data to be analyzed are saved in a dataframe object called `surgery` which can be imported using the following code.
+The data to be analyzed are saved in a csv file called `surgery.csv` which can be imported using the following code.
 
 ```{r import_data, echo=TRUE, eval=FALSE}
 surgery <- read.csv(url("https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab2/main/surgery.csv"))

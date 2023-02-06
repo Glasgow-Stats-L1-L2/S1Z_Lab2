@@ -27,7 +27,7 @@ The data contains the following variables:
 * **Response** : the difference between pulse rate before and pulse rate after premedication (before-after)
 
 ## Loading the Data {-}
-The data to be analyzed are saved in a dataframe object called `premed.data` which can be imported using the following code.
+The data to be analyzed are saved in a csv file called `premedications.csv` which can be imported using the following code.
 
 
 ```{r import-data-optional, echo=TRUE, warnings=FALSE, message=FALSE}
