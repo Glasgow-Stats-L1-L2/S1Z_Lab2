@@ -34,7 +34,9 @@ The data to be analyzed are saved in a csv file called `premedications.csv` whic
 premed.data <- read.csv(url("https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab2/main/premedications.csv"))
 ```
 
-You may also download the dataset named `premedications.csv` file from our Moodle course page. Save the file in your local computer and then use the `read.csv()` function to import the data in your R. You can load the data set into your workspace by running the code below in an Rscript file in your local Rstudio. Make sure that the `premedications.csv` file is saved in the same folder as the Rscript file. 
+You may download the dataset named `premedications.csv` file from our Moodle course page. Once the file has downloaded, **save it in the same folder** as the `R` script file you created and saved for this lab. You should now set your working directory to this location by clicking `Session > Set Working Directory > To Source File Location`. You can load the data set into your workspace by running `mlb11 <- read.csv("premedications.csv")`. 
+
+
 
 In addition, you need to load the `tidyverse` package as well. To load the package, you simply need to run the following:
 
